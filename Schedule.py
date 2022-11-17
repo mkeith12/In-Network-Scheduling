@@ -2,8 +2,8 @@
 import calendar
 import datetime
 
-#Display 2022 Calendar
-print(calendar.calendar(2022))
+#Display 2021 Calendar
+print(calendar.calendar(2021))
 
 #List to hold concatenated string of date and name of appointments
 app_created=[]
@@ -61,25 +61,24 @@ def main():
     times = ['1pm','2pm','3pm','4pm']
 
     #Prints out menu asks for user input
-    print('Welcome to X Insurance!')
+    print('Welcome to the Cutz!!')
     print('Would you like to make an Apppointment or look up Appoinment?\n')
     print('1. Create Appointment')
     print('2. Look up Appointment')
-    print('3. Speak to a Representative')
-    print('4. Quit\n')
+    print('3. Quit\n')
 
     #User input for their choice
-    choice = int(input('Choose 1, 2, 3, or 4 \n'))
+    choice = int(input('Choose 1, 2, or 3\n'))
     while choice <=3 and choice>=1:
         if choice ==1:
             print('\nEnter date for appointment using only numbers\n')
-            #Assigns year to only 2022
-            year = 2022
+            #Assigns year to only 2021
+            year = 2021
 
             #while loop to allow input and check for date validation
             while True:
                 try:
-                    month = int(input('Enter a month (Ex: '8' for August): '))
+                    month = int(input('Enter a month: '))
                     day = int(input('Enter a day: '))
                     dt=datetime.datetime(year,month,day)
                 except ValueError:
