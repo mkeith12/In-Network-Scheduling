@@ -2,8 +2,8 @@
 import calendar
 import datetime
 
-#Display 2021 Calendar
-print(calendar.calendar(2021))
+#Display 2022 Calendar
+print(calendar.calendar(2022))
 
 #List to hold concatenated string of date and name of appointments
 app_created=[]
@@ -61,19 +61,20 @@ def main():
     times = ['1pm','2pm','3pm','4pm']
 
     #Prints out menu asks for user input
-    print('Welcome to the Cutz!!')
+    print('Welcome to X Insurance')
     print('Would you like to make an Apppointment or look up Appoinment?\n')
     print('1. Create Appointment')
     print('2. Look up Appointment')
-    print('3. Quit\n')
+    print('3. Speak to a Representative')
+    print('4. Quit\n')
 
     #User input for their choice
-    choice = int(input('Choose 1, 2, or 3\n'))
-    while choice <=3 and choice>=1:
+    choice = int(input('Choose 1, 2, or 3,4\n'))
+    while choice <=4 and choice>=1:
         if choice ==1:
             print('\nEnter date for appointment using only numbers\n')
-            #Assigns year to only 2021
-            year = 2021
+            #Assigns year to only 2022
+            year = 2022
 
             #while loop to allow input and check for date validation
             while True:
@@ -117,19 +118,24 @@ def main():
             add_app()
 
             
-            choice = int(input('\nChoose 1, 2, or 3\n'))
+            choice = int(input('\nChoose 1, 2, or 3,4\n'))
 
         elif choice == 2 :
             f_name = input('\nEnter your first name: ')
             #calls function and prints appointment if name match
             search(f_name)
-            choice = int(input('Choose 1, 2, or 3\n'))
+            choice = int(input('Choose 1, 2, or 3,4\n'))
+            
+        elif choice == 3 :
+            print('Connecting..')
             
         else:
             for i in app_created:
                 print(i)
-            print('Thank you')
+            print('Quitting...')
             break
+
+        
 #calls main function
 main()
 
